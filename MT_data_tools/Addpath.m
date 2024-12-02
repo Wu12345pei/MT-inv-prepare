@@ -1,0 +1,8 @@
+addpath("../DGDR-EDI")
+addpath("../DKLB-EDI")
+addpath('Data_calculator\')
+addpath('Dat_writter\')
+addpath('Data_editor\')
+addpath('Data_plotter\')
+addpath('EDI_reader\')
+addpath('Mesh_designer\')

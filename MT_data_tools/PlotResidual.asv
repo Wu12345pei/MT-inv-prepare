@@ -1,0 +1,17 @@
+data_filename = '../DKLLB-DGDR.dat'; 
+res_filename = '../Modular_NLCG_055.dat';
+[Residual_by_period,station_loc] = CalculateRes(data_filename,res_filename);
+
+figure
+for k = 1:4
+    ax = nexttile;
+    for i = 1:length(Residual_by_period)
+        scatter(station_loc(:,1),periods(i)*ones(1,length(station_loc(:,1))),[],Residual_by_period{i}(:,k),"filled");
+        colormap('jet')
+        clim([0 1]);
+        set()
+        colorbar;
+        hold on;
+    end
+end
+        
